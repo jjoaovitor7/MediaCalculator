@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Média Calculator</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Média Calculator</h1>
+    </header>
+
+    <p id="qtdeSchoolMarks">Quantas Notas?</p>
+
+    <div>
+      <label>2 notas</label>
+      <input type="checkbox" name="schoolmark" id="schoolmarks2" />
+      <label>4 notas</label>
+      <input type="checkbox" name="schoolmark" id="schoolmarks4" />
+    </div>
+
+    <div>
+      <input
+        type="number"
+        max="10"
+        min="0"
+        name="schoolmarkinput"
+        id="sm1"
+        value="0"
+      />
+      <input
+        type="number"
+        max="10"
+        min="0"
+        name="schoolmarkinput"
+        id="sm2"
+        value="0"
+      />
+      <input
+        type="number"
+        max="10"
+        min="0"
+        name="schoolmarkinput"
+        id="sm3"
+        value="0"
+      />
+      <input
+        type="number"
+        max="10"
+        min="0"
+        name="schoolmarkinput"
+        id="sm4"
+        value="0"
+      />
+    </div>
+
+    <button type="submit" id="btn-send">Enviar!</button>
+
+    <div>
+      <p id="media"></p>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
