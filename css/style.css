@@ -19,28 +19,39 @@ header h1 {
 }
 
 #qtdeSchoolMarks {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 21px;
-    font-weight: bold;
-    margin: 0 0 10px 0  ;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
 }
 
-label, input[type="checkbox"] {
-    margin: 16px 0;
+label,
+input[type="checkbox"] {
+  margin: 16px 0;
 }
 
 label {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
 }
 
 button[type="submit"] {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 #media {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    margin: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 16px;
+}
+
+@media screen and (max-width: 768px){
+  body {
+    margin: 50% 0 0 0;
+  }
+
+  header h1 {
+    text-align: center;
+  }
 
 }
