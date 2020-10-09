@@ -18,16 +18,16 @@ body {
 
 /***** header *****/
 header h1 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 36px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 40px;
   margin: 16px;
 }
 /******************/
 
 
 #qtdeSchoolMarks {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 21px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 25px;
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -38,7 +38,7 @@ input[type="checkbox"] {
 }
 
 label {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Architects Daughter', cursive;
   font-size: 18px;
 }
 
@@ -48,6 +48,7 @@ input[type="number"] {
   border-radius: 4px;
   margin: 1px;
   padding: 8px 16px;
+  font-family: 'Architects Daughter', cursive;
 }
 
 
@@ -58,11 +59,12 @@ input[type="number"] {
   color: #000;
   padding: 8px 16px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 25px;
   opacity: 0.95;
   cursor: pointer;
+  font-family: 'Architects Daughter', cursive;
 }
 #btn-calculate:hover {
   opacity: 1;
@@ -71,8 +73,8 @@ input[type="number"] {
 
 
 #media {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-family: 'Architects Daughter', cursive;  font-size: 20px;
+  font-size: 25px;
   margin: 5px;
 }
 
