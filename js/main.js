@@ -40,12 +40,11 @@ function SM2(e) {
   if (chk2SM.checked == true && chk4SM.checked == false) {
     show2SchoolMarks();
   }
-  
+
   else if (chk2SM.checked == false && chk4SM.checked == false) {
     hidden2SchoolMarks();
-  }
-  
-  else if (chk2SM.checked == false && chk4SM.checked == true) {
+
+  } else if (chk2SM.checked == false && chk4SM.checked == true) {
     hidden2SchoolMarks();
   }
 }
@@ -71,7 +70,19 @@ function calculateMedia() {
     parseFloat(inputSchoolMark3.value) +
     parseFloat(inputSchoolMark4.value);
 
-  let mediaResult = sumSchoolMarks / 4;
+  let mediaResult = 0;
+
+  if (chk2SM.checked == true && chk4SM.checked == false) {
+    mediaResult = sumSchoolMarks / 2;
+  }
+
+  else if (chk4SM.checked == true && chk2SM.checked == false) {
+    mediaResult = sumSchoolMarks / 4;
+  }
+
+  else {
+    mediaResult = 0;
+  }
 
   media.textContent = "Média: " + mediaResult;
 }
