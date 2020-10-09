@@ -6,7 +6,7 @@ const inputSchoolMark4 = document.getElementById("sm4");
 const chk2SM = document.getElementById("schoolmarks2");
 const chk4SM = document.getElementById("schoolmarks4");
 
-const btnSend = document.getElementById("btn-send");
+const btnSend = document.getElementById("btn-calculate");
 
 const media = document.getElementById("media");
 
@@ -39,7 +39,13 @@ hidden4SchoolMarks();
 function SM2(e) {
   if (chk2SM.checked == true && chk4SM.checked == false) {
     show2SchoolMarks();
-  } else if (chk2SM.checked == false && chk4SM.checked == false) {
+  }
+  
+  else if (chk2SM.checked == false && chk4SM.checked == false) {
+    hidden2SchoolMarks();
+  }
+  
+  else if (chk2SM.checked == false && chk4SM.checked == true) {
     hidden2SchoolMarks();
   }
 }
@@ -47,7 +53,13 @@ function SM2(e) {
 function SM4(e) {
   if (chk4SM.checked == true && chk2SM.checked == false) {
     show4SchoolMarks();
-  } else if (chk4SM.checked == false && chk2SM.checked == false) {
+  }
+  
+  else if (chk4SM.checked == false && chk2SM.checked == false) {
+    hidden4SchoolMarks();
+  }
+  
+  else if (chk4SM.checked == false && chk2SM.checked == true) {
     hidden4SchoolMarks();
   }
 }
