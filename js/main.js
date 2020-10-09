@@ -45,7 +45,7 @@ function SM2(e) {
     hidden2SchoolMarks();
 
   } else if (chk2SM.checked == false && chk4SM.checked == true) {
-    hidden2SchoolMarks();
+    // pass
   }
 }
 
@@ -59,7 +59,7 @@ function SM4(e) {
   }
   
   else if (chk4SM.checked == false && chk2SM.checked == true) {
-    hidden4SchoolMarks();
+    // pass
   }
 }
 
