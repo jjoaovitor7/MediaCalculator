@@ -64,19 +64,20 @@ function SM4(e) {
 }
 
 function calculateMedia() {
-  let sumSchoolMarks =
-    parseFloat(inputSchoolMark1.value) +
-    parseFloat(inputSchoolMark2.value) +
-    parseFloat(inputSchoolMark3.value) +
-    parseFloat(inputSchoolMark4.value);
-
+  let sumSchoolMarks = 0;
   let mediaResult = 0;
 
   if (chk2SM.checked == true && chk4SM.checked == false) {
+    sumSchoolMarks = parseFloat(inputSchoolMark1.value) + parseFloat(inputSchoolMark2.value);
     mediaResult = sumSchoolMarks / 2;
   }
 
   else if (chk4SM.checked == true && chk2SM.checked == false) {
+    sumSchoolMarks =
+    parseFloat(inputSchoolMark1.value) +
+    parseFloat(inputSchoolMark2.value) +
+    parseFloat(inputSchoolMark3.value) +
+    parseFloat(inputSchoolMark4.value);
     mediaResult = sumSchoolMarks / 4;
   }
 
