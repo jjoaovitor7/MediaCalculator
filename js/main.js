@@ -86,11 +86,27 @@ function calculateMedia() {
   let sumSchoolMarks = 0, media = 0;
 
   if (chk2SM.checked == true && chk4SM.checked == false) {
+    if (inputSchoolMark1.value == "" ||
+        inputSchoolMark2.value == ""
+    ) {
+      textMedia.textContent = "O valor de nota1-2 não pode ser vazio!";
+      return;
+    }
+    
     sumSchoolMarks = parseFloat(inputSchoolMark1.value) + parseFloat(inputSchoolMark2.value);
     media = sumSchoolMarks / 2;
   }
 
   else if (chk4SM.checked == true && chk2SM.checked == false) {
+    if (inputSchoolMark1.value == "" ||
+        inputSchoolMark2.value == "" ||
+        inputSchoolMark3.value == "" ||
+        inputSchoolMark4.value == ""
+    ) {
+      textMedia.textContent = "O valor de nota1-4 não pode ser vazio!";
+      return;
+    }
+
     sumSchoolMarks =
     parseFloat(inputSchoolMark1.value) +
     parseFloat(inputSchoolMark2.value) +
