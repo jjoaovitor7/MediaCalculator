@@ -25,7 +25,7 @@ header h1 {
 /******************/
 
 
-#qtdeSchoolMarks {
+#textHowManySchoolMarks {
   font-family: 'Architects Daughter', cursive;
   font-size: 25px;
   font-weight: bold;
@@ -72,7 +72,7 @@ input[type="number"] {
 /****************************/
 
 
-#media {
+#textMedia {
   font-family: 'Architects Daughter', cursive;  font-size: 20px;
   font-size: 25px;
   margin: 5px;

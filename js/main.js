@@ -1,24 +1,38 @@
+///// inputs /////
 const inputSchoolMark1 = document.getElementById("sm1");
 const inputSchoolMark2 = document.getElementById("sm2");
 const inputSchoolMark3 = document.getElementById("sm3");
 const inputSchoolMark4 = document.getElementById("sm4");
+//////////////////
 
+
+///// checkboxes /////
 const chk2SM = document.getElementById("schoolmarks2");
 const chk4SM = document.getElementById("schoolmarks4");
+//////////////////////
 
+
+///// botões /////
 const btnSend = document.getElementById("btn-calculate");
+//////////////////
 
-const media = document.getElementById("media");
+
+///// textos /////
+const textMedia = document.getElementById("textMedia");
+//////////////////
+
 
 function show2SchoolMarks() {
   inputSchoolMark1.style.display = "block";
   inputSchoolMark2.style.display = "block";
 }
 
+
 function hidden2SchoolMarks() {
   inputSchoolMark1.style.display = "none";
   inputSchoolMark2.style.display = "none";
 }
+
 
 function show4SchoolMarks() {
   inputSchoolMark1.style.display = "block";
@@ -27,6 +41,7 @@ function show4SchoolMarks() {
   inputSchoolMark4.style.display = "block";
 }
 
+
 function hidden4SchoolMarks() {
   inputSchoolMark1.style.display = "none";
   inputSchoolMark2.style.display = "none";
@@ -34,9 +49,11 @@ function hidden4SchoolMarks() {
   inputSchoolMark4.style.display = "none";
 }
 
+
 hidden4SchoolMarks();
 
-function SM2(e) {
+
+function SchoolMarks2Selected(e) {
   if (chk2SM.checked == true && chk4SM.checked == false) {
     show2SchoolMarks();
   }
@@ -49,7 +66,8 @@ function SM2(e) {
   }
 }
 
-function SM4(e) {
+
+function SchoolMarks4Selected(e) {
   if (chk4SM.checked == true && chk2SM.checked == false) {
     show4SchoolMarks();
   }
@@ -63,13 +81,13 @@ function SM4(e) {
   }
 }
 
+
 function calculateMedia() {
-  let sumSchoolMarks = 0;
-  let mediaResult = 0;
+  let sumSchoolMarks = 0, media = 0;
 
   if (chk2SM.checked == true && chk4SM.checked == false) {
     sumSchoolMarks = parseFloat(inputSchoolMark1.value) + parseFloat(inputSchoolMark2.value);
-    mediaResult = sumSchoolMarks / 2;
+    media = sumSchoolMarks / 2;
   }
 
   else if (chk4SM.checked == true && chk2SM.checked == false) {
@@ -78,17 +96,23 @@ function calculateMedia() {
     parseFloat(inputSchoolMark2.value) +
     parseFloat(inputSchoolMark3.value) +
     parseFloat(inputSchoolMark4.value);
-    mediaResult = sumSchoolMarks / 4;
+    media = sumSchoolMarks / 4;
   }
 
   else {
-    mediaResult = 0;
+    media = 0;
   }
 
-  media.textContent = "Média: " + mediaResult;
+  textMedia.textContent = "Média: " + media;
 }
 
-chk2SM.addEventListener("click", SM2);
-chk4SM.addEventListener("click", SM4);
 
+///// checkboxes event /////
+chk2SM.addEventListener("click", SchoolMarks2Selected);
+chk4SM.addEventListener("click", SchoolMarks4Selected);
+////////////////////////////
+
+
+///// botões event /////
 btnSend.addEventListener("click", calculateMedia);
+////////////////////////
