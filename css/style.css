@@ -62,12 +62,11 @@ input[type="number"] {
   font-size: 18px;
   font-weight: bold;
   border-radius: 25px;
-  opacity: 0.95;
   cursor: pointer;
   font-family: 'Architects Daughter', cursive;
 }
 #btn-calculate:hover {
-  opacity: 1;
+  background-color: #29c00bbb;
 }
 /****************************/
 
