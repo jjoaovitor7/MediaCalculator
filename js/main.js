@@ -13,7 +13,7 @@ const chk4SM = document.getElementById("schoolmarks4");
 
 
 ///// botões /////
-const btnSend = document.getElementById("btn-calculate");
+const btnCalculate = document.getElementById("btn-calculate");
 //////////////////
 
 
@@ -89,8 +89,8 @@ function calculateMedia() {
     if (inputSchoolMark1.value == "" ||
         inputSchoolMark2.value == ""
     ) {
-      textMedia.textContent = "O valor de nota1-2 não pode ser vazio!";
-      return;
+        textMedia.textContent = "O valor de nota1-2 não pode ser vazio!";
+        return;
     }
     
     sumSchoolMarks = parseFloat(inputSchoolMark1.value) + parseFloat(inputSchoolMark2.value);
@@ -103,8 +103,8 @@ function calculateMedia() {
         inputSchoolMark3.value == "" ||
         inputSchoolMark4.value == ""
     ) {
-      textMedia.textContent = "O valor de nota1-4 não pode ser vazio!";
-      return;
+        textMedia.textContent = "O valor de nota1-4 não pode ser vazio!";
+        return;
     }
 
     sumSchoolMarks =
@@ -130,5 +130,5 @@ chk4SM.addEventListener("click", SchoolMarks4Selected);
 
 
 ///// botões event /////
-btnSend.addEventListener("click", calculateMedia);
+btnCalculate.addEventListener("click", calculateMedia);
 ////////////////////////
