@@ -35,16 +35,14 @@ function hidden2SchoolMarks() {
 
 
 function show4SchoolMarks() {
-  inputSchoolMark1.style.display = "block";
-  inputSchoolMark2.style.display = "block";
+  show2SchoolMarks();
   inputSchoolMark3.style.display = "block";
   inputSchoolMark4.style.display = "block";
 }
 
 
 function hidden4SchoolMarks() {
-  inputSchoolMark1.style.display = "none";
-  inputSchoolMark2.style.display = "none";
+  hidden2SchoolMarks();
   inputSchoolMark3.style.display = "none";
   inputSchoolMark4.style.display = "none";
 }
@@ -86,6 +84,8 @@ function calculateMedia() {
   let sumSchoolMarks = 0, media = 0;
 
   if (chk2SM.checked == true && chk4SM.checked == false) {
+
+    // verificando se o valor do input é vazio
     if (inputSchoolMark1.value == "" ||
         inputSchoolMark2.value == ""
     ) {
@@ -98,6 +98,8 @@ function calculateMedia() {
   }
 
   else if (chk4SM.checked == true && chk2SM.checked == false) {
+
+    // verificando se o valor do input é vazio
     if (inputSchoolMark1.value == "" ||
         inputSchoolMark2.value == "" ||
         inputSchoolMark3.value == "" ||
