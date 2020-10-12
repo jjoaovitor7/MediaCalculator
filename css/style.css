@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 
 /***** body *****/
 body {
@@ -18,8 +22,8 @@ body {
 
 /***** header *****/
 header h1 {
-  font-size: 40px;
-  margin: 16px;
+  font-size: 4rem;
+  margin: 1.6rem;
 }
 /******************/
 
@@ -35,40 +39,40 @@ input[type="number"],
 
 
 #textHowManySchoolMarks {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 0 0 10px 0;
+  margin: 0 0 1rem 0;
 }
 
 
 label,
 input[type="checkbox"] {
-  margin: 16px 0;
+  margin: 1.6rem 0;
 }
 
 label {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 input[type="number"] {
-  width: 100px;
-  border: 2px solid #2dca0ebb;
-  border-radius: 4px;
-  margin: 1px;
-  padding: 8px 16px;
+  width: 10rem;
+  border: .2rem solid #2dca0ebb;
+  border-radius: .4rem;
+  margin: .1rem;
+  padding: .8rem 1.6rem;
 }
 
 
 /***** calculate button *****/
 #btn-calculate {
-  margin: 5px 0;
+  margin: .5rem 0;
   background-color: #2dca0ebb;
   color: #000;
-  padding: 8px 16px;
+  padding: .8rem 1.6rem;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 2.5rem;
   cursor: pointer;
 }
 #btn-calculate:hover {
@@ -78,8 +82,8 @@ input[type="number"] {
 
 
 #textMedia {
-  font-size: 25px;
-  margin: 5px;
+  font-size: 2.5rem;
+  margin: .5rem;
 }
 
 
