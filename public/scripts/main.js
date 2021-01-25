@@ -26,37 +26,37 @@ SchoolMarksStyleInstance.hidden4SchoolMarks(
 ////////////////////////////
 
 function SchoolMarks2Selected() {
-  if (cb2SM.checked == true && cb4SM.checked == false) {
+  if (cb2SM.checked && !cb4SM.checked) {
     SchoolMarksStyleInstance.show2SchoolMarks(
       inputSchoolMark1,
       inputSchoolMark2
     );
-  } else if (cb2SM.checked == false && cb4SM.checked == false) {
+  } else if (!cb2SM.checked && !cb4SM.checked) {
     SchoolMarksStyleInstance.hidden2SchoolMarks(
       inputSchoolMark1,
       inputSchoolMark2
     );
-  } else if (cb2SM.checked == false && cb4SM.checked == true) {
+  } else if (!cb2SM.checked && cb4SM.checked) {
     return 0;
   }
 }
 
 function SchoolMarks4Selected() {
-  if (cb4SM.checked == true && cb2SM.checked == false) {
+  if (cb4SM.checked && !cb2SM.checked) {
     SchoolMarksStyleInstance.show4SchoolMarks(
       inputSchoolMark1,
       inputSchoolMark2,
       inputSchoolMark3,
       inputSchoolMark4
     );
-  } else if (cb4SM.checked == false && cb2SM.checked == false) {
+  } else if (!cb4SM.checked && !cb2SM.checked) {
     SchoolMarksStyleInstance.hidden4SchoolMarks(
       inputSchoolMark1,
       inputSchoolMark2,
       inputSchoolMark3,
       inputSchoolMark4
     );
-  } else if (cb4SM.checked == false && cb2SM.checked == true) {
+  } else if (!cb4SM.checked && cb2SM.checked) {
     return 0;
   }
 }
