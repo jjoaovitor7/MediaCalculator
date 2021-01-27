@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test Suite</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/qunit/qunit-2.14.0.css"
+    />
+  </head>
+
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.14.0.js"></script>
+    <script type="module">
+      import calculateMedia from "../public/scripts/calculateMedia.js";
+      ///// INPUTS /////
+      const inputZero1 = document.createElement("input");
+      inputZero1.value = 0;
+      const inputZero2 = document.createElement("input");
+      inputZero2.value = 0;
+      const inputZero3 = document.createElement("input");
+      inputZero3.value = 0;
+      const inputZero4 = document.createElement("input");
+      inputZero4.value = 0;
+
+      const inputTen1 = document.createElement("input");
+      inputTen1.value = 10;
+      const inputTen2 = document.createElement("input");
+      inputTen2.value = 10;
+      const inputTen3 = document.createElement("input");
+      inputTen3.value = 10;
+      const inputTen4 = document.createElement("input");
+      inputTen4.value = 10;
+
+      const inputRandom1 = document.createElement("input");
+      inputRandom1.value = 1;
+      const inputRandom2 = document.createElement("input");
+      inputRandom2.value = 2;
+      const inputRandom3 = document.createElement("input");
+      inputRandom3.value = 3;
+      const inputRandom4 = document.createElement("input");
+      inputRandom4.value = 4;
+      //////////////////
+
+      ///// CHECKBOXES /////
+      const cbChecked = document.createElement("input");
+      cbChecked.type = "checkbox";
+      cbChecked.setAttribute("checked", "checked");
+
+      const cbNotChecked = document.createElement("input");
+      cbNotChecked.type = "checkbox";
+      cbNotChecked.removeAttribute("checked");
+      //////////////////////
+
+      ///// TEXTS /////
+      const textMedia = document.createElement("p");
+      /////////////////
+
+      QUnit.module("Calculadora de Média", function () {
+        QUnit.test(
+          "Quando a opção de 2 notas estiver ativa e todas as notas forem 0.",
+          function (assert) {
+            assert.equal(
+              calculateMedia(
+                cbChecked,
+                cbNotChecked,
+                inputZero1,
+                inputZero2,
+                inputZero3,
+                inputZero4,
+                textMedia
+              ),
+              0
+            );
+          }
+        );
+
+        QUnit.test(
+          "Quando a opção de 2 notas estiver ativa e todas as notas forem 10.",
+          function (assert) {
+            assert.equal(
+              calculateMedia(
+                cbChecked,
+                cbNotChecked,
+                inputTen1,
+                inputTen2,
+                inputTen3,
+                inputTen4,
+                textMedia
+              ),
+              10
+            );
+          }
+        );
+
+        QUnit.test(
+          "Quando a opção de 2 notas estiver ativa e todas as notas forem 'aleatórias'.",
+          function (assert) {
+            assert.equal(
+              calculateMedia(
+                cbChecked,
+                cbNotChecked,
+                inputRandom1,
+                inputRandom2,
+                inputRandom3,
+                inputRandom4,
+                textMedia
+              ),
+              1.5
+            );
+          }
+        );
+
+        QUnit.test(
+          "Quando a opção de 4 notas estiver ativa e todas as notas forem 0.",
+          function (assert) {
+            assert.equal(
+              calculateMedia(
+                cbNotChecked,
+                cbChecked,
+                inputZero1,
+                inputZero2,
+                inputZero3,
+                inputZero4,
+                textMedia
+              ),
+              0
+            );
+          }
+        );
+
+        QUnit.test(
+          "Quando a opção de 2 notas estiver ativa e todas as notas forem 10.",
+          function (assert) {
+            assert.equal(
+              calculateMedia(
+                cbNotChecked,
+                cbChecked,
+                inputTen1,
+                inputTen2,
+                inputTen3,
+                inputTen4,
+                textMedia
+              ),
+              10
+            );
+          }
+        );
+
+        QUnit.test(
+          "Quando a opção de 2 notas estiver ativa e todas as notas forem 'aleatórias'.",
+          function (assert) {
+            assert.equal(
+              calculateMedia(
+                cbNotChecked,
+                cbChecked,
+                inputRandom1,
+                inputRandom2,
+                inputRandom3,
+                inputRandom4,
+                textMedia
+              ),
+              2.5
+            );
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

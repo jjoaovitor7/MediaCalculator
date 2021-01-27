@@ -1,19 +1,16 @@
-///// TEXTS /////
-const textMedia = document.getElementById("textMedia");
-/////////////////
-
 function calculateMedia(
   cb2SM,
   cb4SM,
   inputSchoolMark1,
   inputSchoolMark2,
   inputSchoolMark3,
-  inputSchoolMark4
+  inputSchoolMark4,
+  textMedia
 ) {
   let sumSchoolMarks = 0;
   let media = 0;
 
-  if (cb2SM.checked == true && cb4SM.checked == false) {
+  if (cb2SM.checked && !cb4SM.checked) {
     if (inputSchoolMark1.value == "" || inputSchoolMark2.value == "") {
       textMedia.textContent = "O valor de nota1-2 não pode ser vazio!";
       return 0;
@@ -22,7 +19,9 @@ function calculateMedia(
     sumSchoolMarks =
       parseFloat(inputSchoolMark1.value) + parseFloat(inputSchoolMark2.value);
     media = sumSchoolMarks / 2;
-  } else if (cb4SM.checked == true && cb2SM.checked == false) {
+    textMedia.textContent = "Média: " + media;
+    return media;
+  } else if (!cb2SM.checked && cb4SM.checked) {
     if (
       inputSchoolMark1.value == "" ||
       inputSchoolMark2.value == "" ||
@@ -39,11 +38,13 @@ function calculateMedia(
       parseFloat(inputSchoolMark3.value) +
       parseFloat(inputSchoolMark4.value);
     media = sumSchoolMarks / 4;
+    textMedia.textContent = "Média: " + media;
+    return media;
   } else {
     media = 0;
+    textMedia.textContent = "Média: " + media;
+    return 0;
   }
-
-  textMedia.textContent = "Média: " + media;
 }
 
 export default calculateMedia;

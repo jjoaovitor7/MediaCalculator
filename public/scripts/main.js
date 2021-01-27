@@ -10,6 +10,10 @@ const cb2SM = document.getElementById("schoolmarks2");
 const cb4SM = document.getElementById("schoolmarks4");
 //////////////////////
 
+///// TEXTS /////
+const textMedia = document.getElementById("textMedia");
+/////////////////
+
 ///// BUTTONS /////
 const btnCalculate = document.getElementById("btn-calculate");
 //////////////////
@@ -70,7 +74,8 @@ function _calculateMedia() {
     inputSchoolMark1,
     inputSchoolMark2,
     inputSchoolMark3,
-    inputSchoolMark4
+    inputSchoolMark4,
+    textMedia
   );
 }
 ///////////////////////////
