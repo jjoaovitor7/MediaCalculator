@@ -59,9 +59,9 @@
       const textMedia = document.createElement("p");
       /////////////////
 
-      QUnit.module("Calculadora de Média", function () {
+      QUnit.module("Quando a opção de 2 notas estiver ativa", function () {
         QUnit.test(
-          "Quando a opção de 2 notas estiver ativa e todas as notas forem 0.",
+          "e todas as notas forem 0.",
           function (assert) {
             assert.equal(
               calculateMedia(
@@ -79,7 +79,7 @@
         );
 
         QUnit.test(
-          "Quando a opção de 2 notas estiver ativa e todas as notas forem 10.",
+          "e todas as notas forem 10.",
           function (assert) {
             assert.equal(
               calculateMedia(
@@ -97,7 +97,7 @@
         );
 
         QUnit.test(
-          "Quando a opção de 2 notas estiver ativa e todas as notas forem 'aleatórias'.",
+          "e todas as notas forem 'aleatórias'.",
           function (assert) {
             assert.equal(
               calculateMedia(
@@ -113,9 +113,11 @@
             );
           }
         );
+      });
 
+      QUnit.module("Quando a opção de 4 notas estiver ativa", function () {
         QUnit.test(
-          "Quando a opção de 4 notas estiver ativa e todas as notas forem 0.",
+          "e todas as notas forem 0.",
           function (assert) {
             assert.equal(
               calculateMedia(
@@ -133,7 +135,7 @@
         );
 
         QUnit.test(
-          "Quando a opção de 4 notas estiver ativa e todas as notas forem 10.",
+          "e todas as notas forem 10.",
           function (assert) {
             assert.equal(
               calculateMedia(
@@ -151,7 +153,7 @@
         );
 
         QUnit.test(
-          "Quando a opção de 4 notas estiver ativa e todas as notas forem 'aleatórias'.",
+          "e todas as notas forem 'aleatórias'.",
           function (assert) {
             assert.equal(
               calculateMedia(
