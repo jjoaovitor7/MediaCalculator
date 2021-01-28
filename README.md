@@ -6,7 +6,7 @@
 
 ## :scroll: Sobre
 
-Calculadora de Média.
+Calculadora de Média (Notas Escolares) com as opções de 2 notas e 4 notas.
 
 ---
 
